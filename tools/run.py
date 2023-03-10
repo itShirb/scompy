@@ -30,5 +30,9 @@ elif path.startswith("/"):
     fpath = "."+path
 else:
     fpath = "./"+path
-subprocess.call([fpath])
+try:
+    subprocess.call([fpath])
+except:
+    fpath.replace('/', '\\')
+    subprocess.call([fpath])
 f.close()
