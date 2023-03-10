@@ -3,7 +3,10 @@ import time
 import subprocess
 
 subprocess.call(['premake/premake5', 'gmake2'])
-subprocess.call(['make'])
+try:
+    subprocess.call(['make'])
+except:
+    subprocess.call(['mingw32-make'])
 
 directories = ['src', 'include']
 mod='./tools/mod'
