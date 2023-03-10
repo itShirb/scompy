@@ -1,2 +1,2 @@
 @echo off
-python %~dp0\scompy.py %1
+python scompy.py %1
