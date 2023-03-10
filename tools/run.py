@@ -34,7 +34,7 @@ try:
     # print(fpath)
     subprocess.call([fpath])
 except:
-    fpath.replace('/', '\\')
+    fpath = fpath.replace('/', '\\')
     # print(fpath)
     subprocess.call([fpath])
 f.close()
